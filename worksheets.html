@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Romanian Worksheets</title>
+<link rel="stylesheet" href="style.css">
+<script>
+function checkQuiz() {
+  const q1 = document.querySelector('input[name="q1"]:checked');
+  const q2 = document.querySelector('input[name="q2"]:checked');
+  let score = 0;
+  if (q1 && q1.value === 'b') score++;
+  if (q2 && q2.value === 'a') score++;
+  alert('You scored ' + score + '/2');
+}
+</script>
+</head>
+<body>
+<header>
+  <h1>Worksheets</h1>
+  <nav><a href="index.html">Home</a></nav>
+</header>
+<main>
+<section>
+  <h2>Grammar Quiz</h2>
+  <form>
+    <p>1. The definite article for <em>cărți</em> (books) is:</p>
+    <label><input type="radio" name="q1" value="a">carte</label>
+    <label><input type="radio" name="q1" value="b">cărțile</label>
+    <label><input type="radio" name="q1" value="c">cartea</label>
+    <p>2. "Mulțumesc" means:</p>
+    <label><input type="radio" name="q2" value="a">Thank you</label>
+    <label><input type="radio" name="q2" value="b">Goodbye</label>
+    <label><input type="radio" name="q2" value="c">Hello</label>
+  </form>
+  <button onclick="checkQuiz()">Check Answers</button>
+</section>
+</main>
+</body>
+</html>
